@@ -5,8 +5,10 @@ from sqlalchemy import create_engine
 
 
 
-df = pd.read_excel("D:\个人资料\编程相关\面试项目\《玩转Django 2.0》PDF+源代码\《玩转Django 2.0》PDF+源代码\源代码《玩转Django 2.0》\第11章\数据文件\index_comment.xls")
-print(df)
+df = pd.read_excel(
+    "D:\个人资料\编程相关\面试项目\《玩转Django 2.0》PDF+源代码\《玩转Django 2.0》PDF+源代码\源代码《玩转Django 2.0》\第11章\数据文件\index_dynamic.xls"
+)
+# print(df)
 
 
 # 创建engine 用来执行SQL语句
@@ -17,13 +19,15 @@ engine = create_engine(
     max_overflow=10
 )
 
-df.to_sql('index_comment', con=engine, if_exists='append', index=False)
+
+#
+df.to_sql('index_dynamic', con=engine, if_exists='append', index=False)
 
 
 
+# ret = engine.execute("select * from index_label;")
+# print(ret.fetchall())
 
-ret = engine.execute("select * from index_song;")
-print(ret.fetchall())
 
 
 
