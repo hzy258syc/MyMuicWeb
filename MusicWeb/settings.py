@@ -136,6 +136,10 @@ USE_L10N = True
 USE_TZ = True
 
 
+# 配置自定义用户表MyUser
+AUTH_USER_MODEL = 'user.MyUser'
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
