@@ -21,3 +21,7 @@ def indexView(request):
     return render(request, 'index.html', locals())
 
 
+def page_not_found(request):
+    return render(request, 'error404.html', status=404)
+
+
