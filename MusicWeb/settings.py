@@ -68,6 +68,7 @@ TEMPLATES = [
                  os.path.join(BASE_DIR, 'user/templates'),
                  os.path.join(BASE_DIR, 'play/templates'),
                  os.path.join(BASE_DIR, 'comment/templates'),
+                 os.path.join(BASE_DIR, 'search/templates')
                  ]
         ,
         'APP_DIRS': True,
@@ -135,7 +136,12 @@ USE_L10N = True
 USE_TZ = True
 
 
+# 配置自定义用户表MyUser
+AUTH_USER_MODEL = 'user.MyUser'
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
