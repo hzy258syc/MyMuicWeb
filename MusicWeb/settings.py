@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'm85l=%wn&vdf22d!i^5ty0q5fa2%za6(ie)gbxig-f2bz9-#ck'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -142,6 +142,8 @@ AUTH_USER_MODEL = 'user.MyUser'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
+# STATIC_ROOT设置项目上线后使用的静态资源
+STATIC_ROOT = 'd:/code house/DjangoTestCodes/MusicWeb/static'
 STATIC_URL = '/static/'
+# STATICFILES_DIRS将Admin的静态资源保存在static文件夹中
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
